@@ -15,14 +15,20 @@ can be found in the LICENSE file at https://angular.io/license
       {{ product.name }}
     </a>
   </h3>
+  <img src={{product.pic}} style="width:200px;height:200px;"/>
+  
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
-  <button type="button" (click)="share()">
+  <p>
+    {{ product.price }}
+  </p>
+  <button type="button" (click)="share()" >
+    <a href={{product.url}} target="_blank"></a>
     Share
   </button>
-  <app-product-alerts
+<!--  <app-product-alerts
   [product]="product" 
   (notify)="onNotify()">
-</app-product-alerts>
+  </app-product-alerts>-->
 </div>
